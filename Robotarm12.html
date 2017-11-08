@@ -16,9 +16,35 @@
             robotArm.randomLevel("1, 8");
 
             // Jou instructies volgen hier
+            var a=9
+			for(x = 0; x < 300; x++){
+			robotArm.grab();
+			console.log(color = robotArm.scan());
 
-
-
+			if (color === "red") {
+			robotArm.moveRight();
+			robotArm.drop();
+			robotArm.moveLeft();
+		} else if (color === "white"){
+			robotArm.moveRight();
+			robotArm.drop();
+			robotArm.moveLeft();
+		}else if (color === "green"){
+			robotArm.moveRight();
+			robotArm.drop();
+			robotArm.moveLeft();
+		}else if (color === "blue"){
+			robotArm.moveRight();
+			robotArm.drop();
+			robotArm.moveLeft();
+		}else {
+			robotArm.moveRight();
+			robotArm.grab();
+			robotArm.moveLeft();
+			robotArm.drop();
+			robotArm.moveRight();
+		}
+			}
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
         </script>
